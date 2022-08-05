@@ -11,4 +11,15 @@ let fibonacci = (n, arr = [0]) => {
   return arr;
 };
 
-console.log(fibonacci(10));
+console.log(fibonacci(8));
+
+let fibonacciRec = n =>
+  n < 2
+    ? [0]
+    : n < 3
+    ? [0, 1]
+    : fibonacciRec(n - 1).concat(
+        fibonacciRec(n - 1)[n - 2] + fibonacciRec(n - 1)[n - 3]
+      );
+
+console.log(fibonacciRec(8));
