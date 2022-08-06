@@ -1,6 +1,8 @@
-let arraytosort = [5, 2, 1, 3, 6, 4];
-
-const mergeSort = arraytosort => {
+const mergeSort = (
+  arraytosort = Array.from({ length: 10000 }, () =>
+    Math.floor(Math.random() * 1000)
+  )
+) => {
   if (arraytosort.length > 1) {
     let mid = Math.floor(arraytosort.length / 2),
       b = mergeSort(arraytosort.slice(mid)),
@@ -19,5 +21,3 @@ const mergeSort = arraytosort => {
   }
   return arraytosort;
 };
-
-console.log(mergeSort(arraytosort));
