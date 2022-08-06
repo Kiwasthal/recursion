@@ -6,5 +6,5 @@ Exercise - solutions for OTP CS course.
 <ol>
   <li>Fibonacci array printed using iteration</li>
   <li>Fibonacci array printed using recursion</li>
-  <li>MergeSort algorith using recursion</li>
+  <li>MergeSort algorithm using recursion</li>
 </ol>
