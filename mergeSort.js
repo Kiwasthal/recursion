@@ -1,5 +1,5 @@
 const mergeSort = (
-  arraytosort = Array.from({ length: 10000 }, () =>
+  arraytosort = Array.from({ length: 100 }, () =>
     Math.floor(Math.random() * 1000)
   )
 ) => {
@@ -13,11 +13,13 @@ const mergeSort = (
       if (b[pointerB] < c[pointerC]) a.push(b[pointerB++]);
       else a.push(c[pointerC++]);
     }
-    res = a.concat(b.slice(pointerB)).concat(c.slice(pointerC));
-
-    res.unshift(0, arraytosort.length);
-    arraytosort.splice.apply(arraytosort, res);
-    return arraytosort;
+    arraytosort.splice(
+      0,
+      arraytosort.length,
+      ...a.concat(b.slice(pointerB)).concat(c.slice(pointerC))
+    );
   }
   return arraytosort;
 };
+
+console.log(mergeSort());
