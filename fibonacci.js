@@ -11,7 +11,7 @@ let fibonacci = (n, arr = [0]) => {
   return arr;
 };
 
-console.log(fibonacci(8));
+console.log(fibonacci(8)); //output -> [ 0, 1, 1,  2, 3, 5, 8, 13]
 
 let fibonacciRec = n =>
   n < 2
@@ -22,4 +22,4 @@ let fibonacciRec = n =>
         fibonacciRec(n - 1)[n - 2] + fibonacciRec(n - 1)[n - 3]
       );
 
-console.log(fibonacciRec(8));
+console.log(fibonacciRec(8)); //output -> [ 0, 1, 1,  2, 3, 5, 8, 13]
